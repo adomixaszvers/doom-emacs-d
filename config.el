@@ -2,5 +2,6 @@
 
 ;; Place your private configuration here
 ;;; Show all outlines while diffing org-mode files
-(add-hook 'ediff-prepare-buffer-hook
-          (lambda () (when (eq major-mode 'org-mode) (outline-show-all))))
+(after! (ediff org)
+  (add-hook 'ediff-prepare-buffer-hook
+            (lambda () (when (eq major-mode 'org-mode) (outline-show-all)))))
