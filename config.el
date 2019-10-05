@@ -7,5 +7,6 @@
             (lambda () (when (eq major-mode 'org-mode) (outline-show-all)))))
 
 (setq custom-file (expand-file-name "custom.el" doom-private-dir))
+(setq +rss-elfeed-files `(,(expand-file-name "elfeed.org" doom-private-dir)))
 (when (file-readable-p custom-file)
   (load custom-file))
