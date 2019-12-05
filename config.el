@@ -10,3 +10,7 @@
 (setq +rss-elfeed-files `(,(expand-file-name "elfeed.org" doom-private-dir)))
 (when (file-readable-p custom-file)
   (load custom-file))
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (when (file-remote-p dired-directory)
+              (setq-local dired-actual-switches "-alhB"))))
