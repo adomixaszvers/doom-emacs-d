@@ -6,6 +6,8 @@
   (add-hook 'ediff-prepare-buffer-hook
             (lambda () (when (eq major-mode 'org-mode) (outline-show-all)))))
 (after! direnv (add-hook 'before-hack-local-variables-hook #'direnv-update-environment))
+(after! nix-mode
+  (set-company-backend! 'nix-mode nil))
 
 (setq custom-file (expand-file-name "custom.el" doom-private-dir))
 (setq +rss-elfeed-files `(,(expand-file-name "elfeed.org" doom-private-dir)))
