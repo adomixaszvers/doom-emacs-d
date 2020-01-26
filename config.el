@@ -3,7 +3,8 @@
 ;; Place your private configuration here
 ;;; Show all outlines while diffing org-mode files
 (setq custom-file (expand-file-name "custom.el" doom-private-dir))
-(setq doom-theme 'doom-dracula)
+(when (display-graphic-p)
+  (setq doom-theme 'doom-dracula))
 (after! (ediff org)
   (add-hook 'ediff-prepare-buffer-hook
             (lambda () (when (eq major-mode 'org-mode) (outline-show-all)))))
