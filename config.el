@@ -11,6 +11,7 @@
 (after! direnv (add-hook 'before-hack-local-variables-hook #'direnv-update-environment))
 (after! nix-mode
   (set-company-backend! 'nix-mode nil))
+(setq lsp-haskell-process-path-hie "hie")
 
 (setq +rss-elfeed-files `(,(expand-file-name "elfeed.org" doom-private-dir)))
 (when (file-readable-p custom-file)
