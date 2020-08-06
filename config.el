@@ -20,3 +20,10 @@
           (lambda ()
             (when (file-remote-p dired-directory)
               (setq-local dired-actual-switches "-alhB"))))
+
+(defun my-ediff-init ()
+  "Diffs init.el with init.example.el."
+  (interactive)
+  (let ((my-init (expand-file-name "init.el" doom-private-dir))
+        (upstream-init (expand-file-name "init.example.el" doom-emacs-dir)))
+    (ediff-files my-init upstream-init)))
