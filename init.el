@@ -81,11 +81,6 @@
        ;;spell             ; tasing you for misspelling mispelling
        ;;grammar           ; tasing grammar mistake every you make
 
-       :checkers
-       syntax              ; tasing you for every semicolon you forget
-       ;;spell             ; tasing you for misspelling mispelling
-       ;;grammar           ; tasing grammar mistake every you make
-
        :tools
        ;;ansible
        ;;debugger          ; FIXME stepping through code, to help you add bugs

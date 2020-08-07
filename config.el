@@ -24,6 +24,6 @@
 (defun my-ediff-init ()
   "Diffs init.el with init.example.el."
   (interactive)
-  (let ((my-init (expand-file-name "init.el" doom-private-dir))
+  (let ((my-init (expand-file-name "init.el" "~/.config/doom"))
         (upstream-init (expand-file-name "init.example.el" doom-emacs-dir)))
     (ediff-files my-init upstream-init)))
